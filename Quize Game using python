@@ -88,7 +88,7 @@ if ans=="y":
         print("You are Fail!!!")
     elif per_cent>33 and per_cent<=60:
         print("You need improvement!!!")
-    elif per_cent<60 and per_cent>=80:
+    elif per_cent>60 and per_cent<=80:
         print("Good Performance!!!")
     else:
         print("Excellent Performance!!!!")
