@@ -1,0 +1,71 @@
+# TASK: ROCK, PAPER, SCISSOR GAME
+import random
+print("Winning Rules:\n"
+      +"Rock vs Scissor -> Rock wins\n"
+      +"Rock vs Paper -> Paper wins\n"
+      +"Paper vs Scissor -> Scissor wins\n")
+while True:
+    print("Enter choice:\n1.Rock\n 2.Paper\n 3.Scissor\n")
+    choice = int(input("Enter choice:"))
+    while choice>3 or choice<1:
+        choice = int(input("Enter valid choice."))
+    if choice == 1:
+        user_choice = "rock"
+    elif choice == 2:
+        user_choice = "paper"
+    else:
+        user_choice = "scissor"
+
+    print("User's Choice:",user_choice)
+    print("Now Computer's turn!!!!")
+    computer_choice = random.randint(1,3)
+    while computer_choice == choice:
+        computer_choice = random.randint(1,3)
+    if computer_choice == 1:
+        computer_choicename = "Rock"
+    elif computer_choice == 2:
+        computer_choicename = "Paper"
+    else:
+        computer_choicename = "Scissor"
+    print("Computer's Choice:",computer_choicename)
+    print("User's Choice VS Computer's Choice.....")
+    if choice == computer_choice:
+        print("It's a Draw.")
+        result ="DRAW"
+
+    if(choice ==1 and computer_choice ==2):
+        print("Paper wins")
+        result = "Paper"
+    elif(choice ==1 and computer_choice ==3):
+        print("rock wins")
+        result ="rock"
+    elif(choice == 2 and computer_choice == 1):
+        print("paper wins")
+        result = "paper"
+    elif(choice == 2 and computer_choice == 3):
+        print("Scissor wins")
+        result = "Scissor"
+    elif(choice == 3 and computer_choice == 1):
+        print("rock wins")
+        result = "rock"
+    else:
+        print("Scissor wins")
+        result = "Scissor"
+
+
+    if result == "DRAW":
+        print("It's a tie!!!")
+    elif result == choice:
+        print("User Wins!!!")
+    else:
+        print("Computer Wins!!!")
+
+    print("Do you want next try?(Y/N)\n")
+    ans = input()
+    if ans=="N":
+        break
+print("THANKYOU.....")
+
+
+
+
