@@ -1,0 +1,98 @@
+# QUIZE GAME
+print("Welcome to the Quize!!!!")
+print("Rules of the Quize:\n","1.There are 3 mutiple choice questions and 3 fill in the blanks.\n","2.Each question carries 5 marks.\n","3.All questions are compulsory\n.")
+score=0
+question_no=1
+while True:
+    ans = input("Do you want to start the quize(y/n)??")
+    if ans =="y":
+        print("yes")
+        break
+    elif ans=="n":
+        print("no")
+        break
+    else:
+        print("Type y or n")
+        break
+if ans=="y":
+    print("MCQs are:\n")
+    print(question_no,"Sum of 2 and 3 is:\n","a)3  b)4  c)5  d)7")
+    user_ans1 = input("MCQ1:")
+    correct_ans1 = "c"
+    if user_ans1== correct_ans1:
+        print(" credited 5 marks.")
+        score+= 5
+
+
+    else:
+        print("credited 0  marks./n","correct answer is : c")
+    question_no+=1
+    print(question_no,"Product of 8 and 7 is:\n","a)32  b)56  c)50  d)47")
+    user_ans2=input("MCQ2:")
+    correct_ans2 = "b"
+    if user_ans2== correct_ans2:
+        print(" credited 5 marks.")
+        score+=5
+
+    else:
+        print("credited 0  marks.\n","correct answer is : b")
+
+
+    question_no= question_no+1
+    print(question_no,"GIF stands for:\n","a)Graphics Interchange Format  b)Geological Interface Format  c)Graphics Interface Formula  d)None")
+    user_ans3 = input("MCQ3:")
+    correct_ans3 = "a"
+    if user_ans3==correct_ans3:
+        print("credited 5 marks.")
+        score+=5
+    else:
+        print("credited 0 marks./n","correct answer is: a")
+
+    print("Fill in the Blanks:")
+    question_no+=1
+    print(question_no,"Computer works on ________ principle.")
+    user_ans4 = input("Blank1:")
+    correct_ans4 = "IPO"
+    if user_ans4==correct_ans4:
+        print("credited 5 marks.")
+        score+=5
+    else:
+        print("credited 0 marks./n","correct answer is : IPO(Input Output principle)")
+    question_no+=1
+    print(question_no,"All the physical components of computer system are called_________.")
+    user_ans5 = input("Blank2:")
+    correct_ans5 = "hardware"
+    if user_ans5==correct_ans5:
+        print("credited 5 marks.")
+        score+=5
+    else:
+        print("credited 0 marks./n","correct answer is :hardware.")
+    question_no+=1
+    print(question_no,"_______ represents set of programs that govern operations of a computer system.")
+    user_ans6 = input("Blank3:")
+    correct_ans6 = "Software"
+    if user_ans6==correct_ans6:
+        print("credited 5 marks.")
+        score+=5
+    else:
+        print("credited 0 marks./n","correct answer is: Software")
+    Total_ques = question_no
+    print("Total no. of questions:",Total_ques)
+    Max_marks = question_no*5
+    print("Maximum marks:",Max_marks)
+    print("User's Score:",score)
+
+    per_cent = (score/Max_marks)*100
+    print("Percentage : ",per_cent)
+    if per_cent>=0 and per_cent<=33:
+        print("You are Fail!!!")
+    elif per_cent>33 and per_cent<=60:
+        print("You need improvement!!!")
+    elif per_cent<60 and per_cent>=80:
+        print("Good Performance!!!")
+    else:
+        print("Excellent Performance!!!!")
+
+
+
+
