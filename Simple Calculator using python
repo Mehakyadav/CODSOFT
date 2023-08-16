@@ -1,0 +1,36 @@
+# TASK: SIMPLE CALCULATOR USING  PYTHON
+
+print("Let's Start!!!")
+print("We are going to do some calculations with basic arithmetic operators......")
+print("Enter First Number")
+first_no = int(input("First number:"))
+print("Choose operator(+,-,*,/,%)")
+oper_ator = input("Operator(+,-,*,/,%):")
+print("Enter Second Number")
+sec_no = int(input("Second number:"))
+
+while True:
+    if oper_ator=="+":
+        Sum = first_no + sec_no
+        print("Sum of",first_no,"and",sec_no,"is :",Sum)
+        break
+    elif oper_ator == "-":
+        Difference = first_no - sec_no
+        print("Difference of",first_no,"and",sec_no,"is :",Difference)
+        break
+    elif oper_ator == "*":
+        Product = first_no * sec_no
+        print("Product of",first_no,"and",sec_no,"is :",Product)
+        break
+    elif oper_ator == "/":
+        Quotient = first_no/sec_no
+        print("Quotient of",first_no,"/",sec_no,"is :",Quotient)
+        break
+    elif oper_ator == "%":
+        Remainder = first_no % sec_no
+        print("Remainder of",first_no,"%",sec_no,"is :",Remainder)
+        break
+    else:
+        print("Invalid Calculation")
+        break
+print("ThANKYOU!!!!")
